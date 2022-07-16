@@ -1,0 +1,375 @@
+#:kivy 1.11.1
+<MainScreen>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    RelativeLayout:
+        GridLayout:
+            cols: 1
+            padding: 5
+            spacing: 5
+            pos_hint: {'x': 0.1}
+            ScrollView:
+                BoxLayout:
+                    orientation: "vertical"
+                    ImageButton:
+                        id: imper_metric
+                        text: "AREA"
+                        size_hint: 0.8, 0.6
+                        on_press: root.show_temp()
+                        source: 'images/metri-imper-pretvorba.png'
+                    BoxLayout:
+                        id: layout_temp
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: fahrenheit
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "°F"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.fahrenheit(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_temp
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: celzijus
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "°C"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.celzijus(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                    BoxLayout:
+                        id: layout_con11
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: miles
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "miles"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.miles(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_con11
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: kilometar
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "kilometar"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.kilometar(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                    BoxLayout:
+                        id: layout_con13
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: gallon
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "gallon"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.gallon(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_con13
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: litra
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "litra"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.litra(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                    BoxLayout:
+                        id: layout_con12
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: feet
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "feet"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.feet(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_con12
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: metar11
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "metar"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.metar11(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+
+                    BoxLayout:
+                        id: layout_con14
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: pound
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "pound"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.pound(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_con14
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: kilogram5
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "kilogram"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.kilogram5(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                    ImageButton:
+                        id: distance
+                        text: "UDALJENOST"
+                        size_hint: 0.8, 0.6
+                        on_press: root.show_dist()
+                        # background_color: 0.25, 0.95, 1
+                        source: 'images/vrt-udaljenosti.png'
+                    BoxLayout:
+                        id: layout_dist1
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: hvat
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: 'hvat'
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.hvat(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_dist1
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: metar
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "metar"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.metar(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                    BoxLayout:
+                        id: layout_dist2
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: ral
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: "jutro/ral"
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.ral(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_dist2
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: metar2
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: 'metar'
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.metar2(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                    BoxLayout:
+                        id: layout_dist3
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: lanac
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: 'lanac'
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.lanac(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_dist3
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: metar3
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: 'metar'
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.metar3(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                    BoxLayout:
+                        id: layout_dist4
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: dulum
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: 'dulum'
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.dulum(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_dist4
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: metar4
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: 'metar'
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.metar4(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                    BoxLayout:
+                        id: layout_dist5
+                        orientation: "horizontal"
+                        size_hint: None, None
+                        width: distance.width
+                        height: 0
+                        TextInput:
+                            id: dan_oranja
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: 'dan oranja'
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.dan_oranja(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+                        Label:
+                            id: equal_dist5
+                            text: "="
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                        TextInput:
+                            id: metar5
+                            size_hint: 0, 0
+                            opacity: 0
+                            pos_hint: {'top': 0.8}
+                            hint_text: 'metar'
+                            padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
+                            on_text: root.metar5(self.text)
+                            write_tab: False
+                            on_focus: root.select(self, len(self.hint_text) + 1)
+                            input_filter: 'float'
+
+<RootWidget>:
+    MainScreen:
+        name: "main_screen"

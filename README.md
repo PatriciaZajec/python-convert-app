@@ -1,11 +1,11 @@
 # python-convert-app
-![image](https://user-images.githubusercontent.com/48450281/179363148-6e7c125a-1fc1-4f0d-8b84-f73056aa431c.png)
+![image](https://user-images.githubusercontent.com/48450281/179839638-4cd04704-b649-4243-b8c6-d85e88398683.png)
 
 # Aplikacija služi za pretvorbu osnovnih mjera iz imperijalnog u metrički sustav i obrnuto, dodatno služi za prebacivanje starih prostornih mjera u standard (metar)
 
 Kada se aplikacija pokrene, korisnik može odabrati između 2 opcije (pretvorbe izmežu imperijalnog i metričkog sustava te starih mjera za udaljenost)
 
 Korisnik klikom otvara željeno područje 
-![image](https://user-images.githubusercontent.com/48450281/179363362-eb0b69c3-7a22-41a0-aeb9-6f69d0ce097e.png)
-![image](https://user-images.githubusercontent.com/48450281/179363366-d9f9c499-3dae-4400-b763-cbabddf65785.png)
+![image](https://user-images.githubusercontent.com/48450281/179839667-ef36938e-5b8c-48dd-8e9e-575f5ee50333.png)
+![image](https://user-images.githubusercontent.com/48450281/179839688-ec9bdad1-50c6-46ad-87d1-a3cb70cfa22e.png)
 

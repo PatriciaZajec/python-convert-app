@@ -121,7 +121,7 @@ class MainScreen(Screen):
         if self.ids.hvat.focus == True:
             self.ids.metar.text = ''
             if hvat != '' and hvat != '.' and '-' not in hvat:
-                self.ids.metar.text = '{:.2f}'.format(float(hvat) * 3.59665) + ' metara'
+                self.ids.metar.text = '{:.2f}'.format(float(hvat) * 3.59665) + ' metara kvadratnih'
 
     def metar(self, metar):
         if self.ids.metar.focus == True:
@@ -133,7 +133,7 @@ class MainScreen(Screen):
         if self.ids.ral.focus == True:
             self.ids.metar2.text = ''
             if ral != '' and ral != '.' and '-' not in ral:
-                self.ids.metar2.text = '{:.2f}'.format(float(ral) * 5754.642) + ' metara'
+                self.ids.metar2.text = '{:.2f}'.format(float(ral) * 5754.642) + ' metara kvadratnih'
 
     def metar2(self, metar2):
         if self.ids.metar2.focus == True:
@@ -145,7 +145,7 @@ class MainScreen(Screen):
         if self.ids.lanac.focus == True:
             self.ids.metar3.text = ''
             if metar5 != '' and metar5 != '.' and '-' not in metar5:
-                self.ids.metar3.text = '{:.2f}'.format(float(metar5) * 7193.3) + ' metara'
+                self.ids.metar3.text = '{:.2f}'.format(float(metar5) * 7193.3) + ' metara kvadratnih'
 
     def metar3(self, m):
         if self.ids.metar3.focus == True:
@@ -157,7 +157,7 @@ class MainScreen(Screen):
         if self.ids.dulum.focus == True:
             self.ids.metar4.text = ''
             if dulum != '' and dulum != '.' and '-' not in dulum:
-                self.ids.metar4.text = '{:.2f}'.format(float(dulum) * 1000) + ' metara'
+                self.ids.metar4.text = '{:.2f}'.format(float(dulum) * 1000) + ' metara kvadratnih'
 
     def metar4(self, metar4):
         if self.ids.metar4.focus == True:
@@ -169,7 +169,7 @@ class MainScreen(Screen):
         if self.ids.dan_oranja.focus == True:
             self.ids.metar5.text = ''
             if dan_oranja != '' and dan_oranja != '.' and '-' not in dan_oranja:
-                self.ids.metar5.text = '{:.2f}'.format(float(dan_oranja) * 4000) + ' metara'
+                self.ids.metar5.text = '{:.2f}'.format(float(dan_oranja) * 4000) + ' metara kvadratnih'
     
     def metar5(self, metar5):
         if self.ids.metar5.focus == True:

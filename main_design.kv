@@ -194,11 +194,11 @@
                             input_filter: 'float'
                     ImageButton:
                         id: distance
-                        text: "UDALJENOST"
+                        text: "POVRŠINE"
                         size_hint: 0.8, 0.6
                         on_press: root.show_dist()
                         # background_color: 0.25, 0.95, 1
-                        source: 'images/vrt-udaljenosti.png'
+                        source: 'images/stare-povrsine.png'
                     BoxLayout:
                         id: layout_dist1
                         orientation: "horizontal"
@@ -227,7 +227,7 @@
                             size_hint: 0, 0
                             opacity: 0
                             pos_hint: {'top': 0.8}
-                            hint_text: "metar"
+                            hint_text: "kvadratni metar"
                             padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
                             on_text: root.metar(self.text)
                             write_tab: False
@@ -261,7 +261,7 @@
                             size_hint: 0, 0
                             opacity: 0
                             pos_hint: {'top': 0.8}
-                            hint_text: 'metar'
+                            hint_text: 'kvadratni metar'
                             padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
                             on_text: root.metar2(self.text)
                             write_tab: False
@@ -295,7 +295,7 @@
                             size_hint: 0, 0
                             opacity: 0
                             pos_hint: {'top': 0.8}
-                            hint_text: 'metar'
+                            hint_text: 'kvadratni metar'
                             padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
                             on_text: root.metar3(self.text)
                             write_tab: False
@@ -329,7 +329,7 @@
                             size_hint: 0, 0
                             opacity: 0
                             pos_hint: {'top': 0.8}
-                            hint_text: 'metar'
+                            hint_text: 'kvadratni metar'
                             padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
                             on_text: root.metar4(self.text)
                             write_tab: False
@@ -363,7 +363,7 @@
                             size_hint: 0, 0
                             opacity: 0
                             pos_hint: {'top': 0.8}
-                            hint_text: 'metar'
+                            hint_text: 'kvadratni metar'
                             padding: [6, self.height / 2.0 - (self.line_height / 2.0), 0, 0]
                             on_text: root.metar5(self.text)
                             write_tab: False
